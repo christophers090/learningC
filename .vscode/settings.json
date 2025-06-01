@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        ".tsx": "javascriptreact",
+        "*.tsx": "typescriptreact",
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "string": "cpp",
+        "limits": "cpp",
+        "optional": "cpp",
+        "vector": "cpp",
+        "sensor_moduel_remake.h": "c",
+        "mutex": "cpp"
+    }
+}
