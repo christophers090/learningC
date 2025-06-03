@@ -1,153 +1,151 @@
 # Assembly Language Learning Guide
 
-Welcome to assembly language! This folder contains examples to help you learn assembly from scratch.
+Welcome to assembly language! This folder contains organized examples and tutorials to help you learn assembly from scratch.
 
-## Files in this folder:
+## 📁 Folder Structure
 
-1. **`assembly_basics_tutorial.s`** - Comprehensive tutorial covering all fundamental assembly concepts
-2. **`simple_hello.s`** - Minimal "Hello World" program you can actually compile and run
-3. **`c_to_assembly_examples.c`** - C code that you can compile to assembly to see the relationship
-4. **`README.md`** - This guide
-
-## Getting Started
-
-### What is Assembly Language?
-
-Assembly language is a low-level programming language that's one step above machine code. Each assembly instruction corresponds directly to a machine instruction that the CPU can execute. It's like having direct control over the processor.
-
-**Why learn assembly?**
-
-- Understand how computers really work at the hardware level
-- Debug and optimize performance-critical code
-- Embedded systems programming often requires assembly knowledge
-- Reverse engineering and security analysis
-- It makes you a better programmer by understanding what's "under the hood"
-
-### Key Concepts (from your C/C++ background):
-
-| C/C++ Concept     | Assembly Equivalent                     |
-| ----------------- | --------------------------------------- |
-| Variables         | Registers and memory locations          |
-| `int x = 10;`     | `movq $10, %rax`                        |
-| `if (x > 5)`      | `cmpq $5, %rax; jg label`               |
-| `while (x < 100)` | Loop with `cmp` and conditional jumps   |
-| Function calls    | `call` instruction + calling convention |
-| Arrays            | Memory with calculated offsets          |
-| Pointers          | Memory addresses in registers           |
-
-## How to Run the Examples
-
-### Option 1: Simple Hello World (Recommended first step)
-
-```bash
-# Navigate to the assembly folder
-cd assembly
-
-# Assemble the simple hello program
-as simple_hello.s -o simple_hello.o
-
-# Link it (macOS)
-ld simple_hello.o -o simple_hello -macosx_version_min 10.7 -lSystem -no_pie
-
-# Or link it (Linux)
-ld simple_hello.o -o simple_hello
-
-# Run it
-./simple_hello
+```
+assembly/
+├── README.md                    # This guide
+├── tutorials/                   # Step-by-step learning materials
+│   ├── x86-64/                 # Intel/AMD 64-bit tutorials
+│   │   └── assembly_basics_tutorial.s
+│   └── arm64/                  # Apple Silicon (M1/M2) tutorials
+│       └── arm64_mac_tutorial.s
+├── examples/                    # Practical examples
+│   ├── basic/                  # Simple starter examples
+│   │   └── simple_hello.s
+│   └── c-to-asm/              # C code compiled to assembly
+│       ├── c_to_assembly_examples.c
+│       └── c_to_assembly_examples.s
+├── exercises/                   # Hands-on learning exercises
+│   ├── learn_with_objdump.c   # objdump tutorial exercise
+│   ├── learn_with_objdump.o   # Compiled object file
+│   └── learn_with_objdump     # Executable for analysis
+└── reference/                   # Reference materials
+    ├── file_types_demo.s       # Understanding .s vs .o files
+    └── comparisons/            # Architecture comparisons
+        ├── assembly_variants_comparison.s
+        └── assembly_similarity_demo.s
 ```
 
-### Option 2: See How C Compiles to Assembly
+## 🚀 Getting Started
+
+### 1. **Start Here**: Choose Your Architecture
+
+- **Apple Silicon Mac (M1/M2)**: `tutorials/arm64/arm64_mac_tutorial.s`
+- **Intel/AMD PC**: `tutorials/x86-64/assembly_basics_tutorial.s`
+
+### 2. **Try a Simple Example**
 
 ```bash
-# Compile the C file to assembly (don't optimize so it's readable)
+cd examples/basic/
+# Follow compilation instructions in simple_hello.s
+```
+
+### 3. **See C→Assembly Translation**
+
+```bash
+cd examples/c-to-asm/
 gcc -S -O0 c_to_assembly_examples.c
-
-# Look at the generated assembly
-cat c_to_assembly_examples.s
-
-# Compare the C code with the assembly output
-# This is incredibly educational!
+# Compare the .c file with the generated .s file
 ```
 
-### Option 3: Study the Tutorial
-
-Open `assembly_basics_tutorial.s` in your text editor and read through it. It's heavily commented and explains each concept step by step.
-
-## Understanding the Syntax
-
-Assembly uses **AT&T syntax** (common on macOS/Linux):
-
-```assembly
-movq $10, %rax          # Move immediate value 10 into register rax
-movq %rax, %rbx         # Move value from rax to rbx
-addq %rbx, %rax         # Add rbx to rax, store result in rax
-```
-
-**Key syntax rules:**
-
-- `$` prefix = immediate value (literal number)
-- `%` prefix = register name
-- Source comes first, destination comes second
-- Instruction suffixes: `b` (byte), `w` (word), `l` (long), `q` (quad)
-
-## Important Registers (x86-64)
-
-| Register | Purpose                        | C Function Call Usage  |
-| -------- | ------------------------------ | ---------------------- |
-| `%rax`   | General purpose, return values | Function return value  |
-| `%rdi`   | General purpose                | 1st function argument  |
-| `%rsi`   | General purpose                | 2nd function argument  |
-| `%rdx`   | General purpose                | 3rd function argument  |
-| `%rcx`   | General purpose                | 4th function argument  |
-| `%rbx`   | General purpose                | Callee-saved           |
-| `%rsp`   | Stack pointer                  | Points to top of stack |
-| `%rbp`   | Base pointer                   | Frame pointer          |
-
-## Learning Path
-
-1. **Start with `simple_hello.s`** - Get something running
-2. **Read `assembly_basics_tutorial.s`** - Learn the concepts
-3. **Experiment with `c_to_assembly_examples.c`** - See C→Assembly translation
-4. **Write your own simple assembly functions**
-5. **Learn about inline assembly in C/C++**
-
-## Common Beginner Mistakes
-
-1. **Forgetting instruction suffixes** - Use `movq` for 64-bit, `movl` for 32-bit, etc.
-2. **Wrong operand order** - Remember: source first, destination second
-3. **Not understanding calling conventions** - Function arguments go in specific registers
-4. **Stack management errors** - Always balance `push` with `pop`
-5. **Forgetting to exit properly** - Always include an exit system call
-
-## Next Steps
-
-Once you're comfortable with these basics:
-
-1. Learn about floating-point instructions (SSE/AVX)
-2. Study compiler optimizations (`gcc -O2 -S`)
-3. Learn inline assembly for C/C++ programs
-4. Explore other architectures (ARM, RISC-V)
-5. Study reverse engineering tools (objdump, gdb)
-
-## Debugging Assembly
+### 4. **Practice with objdump**
 
 ```bash
-# Compile with debug info
-gcc -g -O0 your_program.c
-
-# Debug with gdb
-gdb ./your_program
-(gdb) layout asm          # Show assembly view
-(gdb) stepi               # Step one instruction
-(gdb) info registers      # Show register values
-(gdb) x/10i $pc          # Show next 10 instructions
+cd exercises/
+objdump -d learn_with_objdump | grep -A 20 "<main>:"
 ```
 
-## Resources for Further Learning
+## 📚 Learning Path
 
-- Intel Software Developer Manual (the ultimate reference)
-- "Programming from the Ground Up" by Jonathan Bartlett
-- Online x86-64 instruction reference
-- Compiler Explorer (godbolt.org) - see how C compiles to assembly online
+| Step | What to Do                | Files to Use                     |
+| ---- | ------------------------- | -------------------------------- |
+| 1    | **Learn basics**          | `tutorials/[your-arch]/`         |
+| 2    | **Try simple example**    | `examples/basic/simple_hello.s`  |
+| 3    | **See C translation**     | `examples/c-to-asm/`             |
+| 4    | **Practice analysis**     | `exercises/learn_with_objdump.*` |
+| 5    | **Compare architectures** | `reference/comparisons/`         |
 
-Happy learning! Assembly might seem intimidating at first, but it's incredibly rewarding once you start to understand how the computer really works.
+## 🔧 Compilation Quick Reference
+
+### ARM64 (Apple Silicon)
+
+```bash
+# Assemble and link
+as file.s -o file.o
+ld file.o -o file -lSystem -syslibroot `xcrun -sdk macosx --show-sdk-path` -arch arm64
+
+# Or use GCC
+gcc file.s -o file
+```
+
+### x86-64 (Intel/AMD)
+
+```bash
+# Assemble and link
+as file.s -o file.o
+ld file.o -o file
+
+# Or use GCC
+gcc file.s -o file
+```
+
+### Analysis Tools
+
+```bash
+# Disassemble
+objdump -d program
+
+# Debug
+gdb program
+(gdb) disassemble main
+```
+
+## 🎯 What Each Folder Contains
+
+### `tutorials/`
+
+Complete step-by-step tutorials that teach concepts from scratch. Start here if you're new to assembly.
+
+### `examples/`
+
+Practical, runnable examples that demonstrate specific concepts. Good for hands-on practice.
+
+### `exercises/`
+
+Interactive learning exercises where you analyze and reverse-engineer code. Great for developing skills.
+
+### `reference/`
+
+Comparison charts, architecture differences, and reference materials. Use when you need to look something up.
+
+## 🔍 Key Concepts You'll Learn
+
+- **Registers**: CPU's built-in super-fast variables
+- **Memory Operations**: Loading and storing data
+- **Control Flow**: Jumps, loops, and conditionals
+- **Function Calls**: How functions work at the assembly level
+- **Stack Management**: How local variables and function calls are managed
+- **Addressing Modes**: Different ways to access memory
+
+## 🌟 Pro Tips
+
+1. **Start with your native architecture** (ARM64 for M1/M2 Macs)
+2. **Use `objdump` frequently** to see how C compiles to assembly
+3. **Don't memorize instructions** - focus on understanding concepts
+4. **Practice with simple programs** before tackling complex ones
+5. **Use debuggers** (`gdb`, `lldb`) to step through code
+
+## 📖 Next Steps
+
+Once comfortable with basics:
+
+1. Learn inline assembly in C/C++
+2. Study compiler optimizations
+3. Explore SIMD instructions (SSE/AVX, NEON)
+4. Try reverse engineering challenges
+5. Learn other architectures
+
+Happy learning! Assembly might seem intimidating at first, but it's incredibly rewarding once you understand how the computer really works.

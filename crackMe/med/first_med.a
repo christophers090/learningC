@@ -1,0 +1,468 @@
+; int __fastcall main(int argc, const char **argv, const char **envp)
+.text:00000001400016AA                 public main
+.text:00000001400016AA main            proc near               ; CODE XREF: __tmainCRTStartup+22C↑p
+.text:00000001400016AA                                         ; DATA XREF: .pdata:00000001400CF090↓o ...
+.text:00000001400016AA
+.text:00000001400016AA var_A0          = byte ptr -0A0h
+.text:00000001400016AA var_80          = byte ptr -80h
+.text:00000001400016AA var_60          = byte ptr -60h
+.text:00000001400016AA var_33          = byte ptr -33h
+.text:00000001400016AA var_32          = byte ptr -32h
+.text:00000001400016AA var_31          = byte ptr -31h
+.text:00000001400016AA var_30          = byte ptr -30h
+.text:00000001400016AA
+.text:00000001400016AA ; __unwind { // __gxx_personality_seh0
+.text:00000001400016AA                 push    rbp
+.text:00000001400016AB                 push    rbx
+.text:00000001400016AC                 sub     rsp, 0B8h
+.text:00000001400016B3                 lea     rbp, [rsp+0B0h]
+.text:00000001400016BB                 call    __main
+.text:00000001400016C0                 lea     rdx, console_height ; int *
+.text:00000001400016C7                 lea     rcx, console_width ; int *
+.text:00000001400016CE                 call    _Z20GetConsoleWindowSizeRiS_ ; GetConsoleWindowSize(int &,int &)
+.text:00000001400016D3                 lea     rax, [rbp+10h+var_33]
+.text:00000001400016D7                 mov     rcx, rax
+.text:00000001400016DA                 call    _ZNSaIcEC1Ev    ; std::allocator<char>::allocator(void)
+.text:00000001400016DF                 lea     rdx, [rbp+10h+var_33]
+.text:00000001400016E3                 lea     rax, [rbp+10h+var_60]
+.text:00000001400016E7                 mov     r8, rdx
+.text:00000001400016EA                 lea     rdx, aNuclearhippiem ; "#nuclearhippiemoneygang"
+.text:00000001400016F1                 mov     rcx, rax
+.text:00000001400016F4 ;   try {
+.text:00000001400016F4                 call    _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EPKcRKS3_ ; std::string::basic_string(char const*,std::allocator<char> const&)
+.text:00000001400016F4 ;   } // starts at 1400016F4
+.text:00000001400016F9                 lea     rax, [rbp+10h+var_33]
+.text:00000001400016FD                 mov     rcx, rax
+.text:0000000140001700                 call    _ZNSaIcED1Ev    ; std::allocator<char>::~allocator()
+.text:0000000140001705                 lea     rax, [rbp+10h+var_32]
+.text:0000000140001709                 mov     rcx, rax
+.text:000000014000170C                 call    _ZNSaIcEC1Ev    ; std::allocator<char>::allocator(void)
+.text:0000000140001711                 lea     rdx, [rbp+10h+var_32]
+.text:0000000140001715                 lea     rax, [rbp+10h+var_80]
+.text:0000000140001719                 mov     r8, rdx
+.text:000000014000171C                 lea     rdx, aOooooooooOoooo ; "\n                   __ooooooooo__\n   "...
+.text:0000000140001723                 mov     rcx, rax
+.text:0000000140001726 ;   try {
+.text:0000000140001726                 call    _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EPKcRKS3_ ; std::string::basic_string(char const*,std::allocator<char> const&)
+.text:0000000140001726 ;   } // starts at 140001726
+.text:000000014000172B                 lea     rax, [rbp+10h+var_32]
+.text:000000014000172F                 mov     rcx, rax
+.text:0000000140001732                 call    _ZNSaIcED1Ev    ; std::allocator<char>::~allocator()
+.text:0000000140001737                 lea     rax, [rbp+10h+var_31]
+.text:000000014000173B                 mov     rcx, rax
+.text:000000014000173E                 call    _ZNSaIcEC1Ev    ; std::allocator<char>::allocator(void)
+.text:0000000140001743                 lea     rdx, [rbp+10h+var_31]
+.text:0000000140001747                 lea     rax, [rbp+10h+var_A0]
+.text:000000014000174E                 mov     r8, rdx
+.text:0000000140001751                 lea     rdx, aOoooOooo  ; "\n                          oooo$$$$$$$"...
+.text:0000000140001758                 mov     rcx, rax
+.text:000000014000175B ;   try {
+.text:000000014000175B                 call    _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EPKcRKS3_ ; std::string::basic_string(char const*,std::allocator<char> const&)
+.text:000000014000175B ;   } // starts at 14000175B
+.text:0000000140001760                 lea     rax, [rbp+10h+var_31]
+.text:0000000140001764                 mov     rcx, rax
+.text:0000000140001767                 call    _ZNSaIcED1Ev    ; std::allocator<char>::~allocator()
+.text:000000014000176C
+.text:000000014000176C loc_14000176C:                          ; CODE XREF: main+310↓j
+.text:000000014000176C                 mov     eax, cs:console_width
+.text:0000000140001772                 lea     rdx, [rbp+10h+var_60]
+.text:0000000140001776                 mov     r8, rdx
+.text:0000000140001779                 lea     rdx, _Z6spacesB5cxx11 ; spaces
+.text:0000000140001780                 mov     ecx, eax
+.text:0000000140001782 ;   try {
+.text:0000000140001782                 call    _Z10set_spacesiRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_ ; set_spaces(int,std::string &,std::string &)
+.text:0000000140001787                 lea     rdx, _Z6spacesB5cxx11 ; spaces
+.text:000000014000178E                 mov     rcx, cs:_refptr__ZSt4cout
+.text:0000000140001795                 call    _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator<<<char>(std::ostream &,std::string const&)
+.text:000000014000179A                 lea     rdx, _ZN13ConsoleColorsL14BRIGHT_BLUE_FGE ; ConsoleColors::BRIGHT_BLUE_FG
+.text:00000001400017A1                 mov     rcx, rax
+.text:00000001400017A4                 call    _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator<<<char>(std::ostream &,std::string const&)
+.text:00000001400017A9                 mov     rcx, rax
+.text:00000001400017AC                 lea     rax, [rbp+10h+var_60]
+.text:00000001400017B0                 mov     rdx, rax
+.text:00000001400017B3                 call    _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator<<<char>(std::ostream &,std::string const&)
+.text:00000001400017B8                 lea     rdx, _ZN13ConsoleColorsL5RESETE ; ConsoleColors::RESET
+.text:00000001400017BF                 mov     rcx, rax
+.text:00000001400017C2                 call    _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator<<<char>(std::ostream &,std::string const&)
+.text:00000001400017C7                 mov     rdx, cs:_refptr__ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+.text:00000001400017CE                 mov     rcx, rax
+.text:00000001400017D1                 call    _ZNSolsEPFRSoS_E ; std::ostream::operator<<(std::ostream & (*)(std::ostream &))
+.text:00000001400017D6                 lea     rdx, aEnterName ; "Enter name: "
+.text:00000001400017DD                 mov     rcx, cs:_refptr__ZSt4cout ; std::ostream *
+.text:00000001400017E4                 call    _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc ; std::operator<<<std::char_traits<char>>(std::ostream &,char const*)
+.text:00000001400017E9                 lea     rdx, _Z9user_nameB5cxx11 ; user_name
+.text:00000001400017F0                 mov     rcx, cs:_refptr__ZSt3cin ; std::istream *
+.text:00000001400017F7                 call    _ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator>><char>(std::istream &,std::string &)
+.text:00000001400017FC                 lea     rdx, system_password
+.text:0000000140001803                 lea     rcx, _Z9user_nameB5cxx11 ; user_name
+.text:000000014000180A                 call    _Z17generate_passwordRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERi ; generate_password(std::string &,int &)
+.text:000000014000180F                 lea     rdx, aEnterPassword ; "Enter password: "
+.text:0000000140001816                 mov     rcx, cs:_refptr__ZSt4cout ; std::ostream *
+.text:000000014000181D                 call    _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc ; std::operator<<<std::char_traits<char>>(std::ostream &,char const*)
+.text:0000000140001822                 lea     rdx, _Z13user_passwordB5cxx11 ; user_password
+.text:0000000140001829                 mov     rcx, cs:_refptr__ZSt3cin ; std::istream *
+.text:0000000140001830                 call    _ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator>><char>(std::istream &,std::string &)
+.text:0000000140001835                 mov     edx, cs:system_password ; int
+.text:000000014000183B                 lea     rax, [rbp+10h+var_30]
+.text:000000014000183F                 mov     rcx, rax        ; this
+.text:0000000140001842                 call    _ZNSt7__cxx119to_stringEi ; std::to_string(int)
+.text:0000000140001847                 lea     rax, [rbp+10h+var_30]
+.text:000000014000184B                 mov     rdx, rax
+.text:000000014000184E                 lea     rcx, _Z13user_passwordB5cxx11 ; user_password
+.text:0000000140001855                 call    _ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_ ; std::operator==<char>(std::string const&,std::string const&)
+.text:000000014000185A                 mov     ebx, eax
+.text:000000014000185C                 lea     rax, [rbp+10h+var_30]
+.text:0000000140001860                 mov     rcx, rax
+.text:0000000140001863                 call    _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev ; std::string::~string()
+.text:0000000140001868                 test    bl, bl
+.text:000000014000186A                 jz      loc_14000193D
+.text:0000000140001870                 call    _Z12ConsoleClearv ; ConsoleClear(void)
+.text:0000000140001875                 lea     rdx, _ZN13ConsoleColorsL15BRIGHT_GREEN_FGE ; ConsoleColors::BRIGHT_GREEN_FG
+.text:000000014000187C                 mov     rcx, cs:_refptr__ZSt4cout
+.text:0000000140001883                 call    _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator<<<char>(std::ostream &,std::string const&)
+.text:0000000140001888                 lea     rdx, aWelcome   ; "!!!Welcome!!!"
+.text:000000014000188F                 mov     rcx, rax        ; std::ostream *
+.text:0000000140001892                 call    _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc ; std::operator<<<std::char_traits<char>>(std::ostream &,char const*)
+.text:0000000140001897                 mov     rdx, cs:_refptr__ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+.text:000000014000189E                 mov     rcx, rax
+.text:00000001400018A1                 call    _ZNSolsEPFRSoS_E ; std::ostream::operator<<(std::ostream & (*)(std::ostream &))
+.text:00000001400018A6                 lea     rax, [rbp+10h+var_80]
+.text:00000001400018AA                 mov     rdx, rax
+.text:00000001400018AD                 mov     rcx, cs:_refptr__ZSt4cout
+.text:00000001400018B4                 call    _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator<<<char>(std::ostream &,std::string const&)
+.text:00000001400018B9                 lea     rdx, _ZN13ConsoleColorsL5RESETE ; ConsoleColors::RESET
+.text:00000001400018C0                 mov     rcx, rax
+.text:00000001400018C3                 call    _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator<<<char>(std::ostream &,std::string const&)
+.text:00000001400018C8                 mov     rdx, cs:_refptr__ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+.text:00000001400018CF                 mov     rcx, rax
+.text:00000001400018D2                 call    _ZNSolsEPFRSoS_E ; std::ostream::operator<<(std::ostream & (*)(std::ostream &))
+.text:00000001400018D7                 mov     ecx, 9C4h       ; dwMilliseconds
+.text:00000001400018DC                 mov     rax, cs:__imp_Sleep
+.text:00000001400018E3                 call    rax ; __imp_Sleep
+.text:00000001400018E5                 lea     rdx, _ZN13ConsoleColorsL13BRIGHT_RED_FGE ; ConsoleColors::BRIGHT_RED_FG
+.text:00000001400018EC                 mov     rcx, cs:_refptr__ZSt4cout
+.text:00000001400018F3                 call    _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator<<<char>(std::ostream &,std::string const&)
+.text:00000001400018F8                 lea     rdx, aButNotIWillDie ; "...BUT NOT I WILL DIE..."
+.text:00000001400018FF                 mov     rcx, rax        ; std::ostream *
+.text:0000000140001902                 call    _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc ; std::operator<<<std::char_traits<char>>(std::ostream &,char const*)
+.text:0000000140001907                 lea     rdx, _ZN13ConsoleColorsL5RESETE ; ConsoleColors::RESET
+.text:000000014000190E                 mov     rcx, rax
+.text:0000000140001911                 call    _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator<<<char>(std::ostream &,std::string const&)
+.text:0000000140001916                 mov     rdx, cs:_refptr__ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+.text:000000014000191D                 mov     rcx, rax
+.text:0000000140001920                 call    _ZNSolsEPFRSoS_E ; std::ostream::operator<<(std::ostream & (*)(std::ostream &))
+.text:0000000140001925                 mov     ecx, 5DCh       ; dwMilliseconds
+.text:000000014000192A                 mov     rax, cs:__imp_Sleep
+.text:0000000140001931                 call    rax ; __imp_Sleep
+.text:0000000140001933                 mov     ecx, 0          ; Code
+.text:0000000140001938                 call    exit
+.text:000000014000193D ; ---------------------------------------------------------------------------
+.text:000000014000193D
+.text:000000014000193D loc_14000193D:                          ; CODE XREF: main+1C0↑j
+.text:000000014000193D                 call    _Z12ConsoleClearv ; ConsoleClear(void)
+.text:0000000140001942                 lea     rdx, _ZN13ConsoleColorsL13BRIGHT_RED_FGE ; ConsoleColors::BRIGHT_RED_FG
+.text:0000000140001949                 mov     rcx, cs:_refptr__ZSt4cout
+.text:0000000140001950                 call    _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator<<<char>(std::ostream &,std::string const&)
+.text:0000000140001955                 lea     rdx, aLoserDetectedG ; "!!!LOSER DETECTED!!!\n GET LUCK NEXT TI"...
+.text:000000014000195C                 mov     rcx, rax        ; std::ostream *
+.text:000000014000195F                 call    _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc ; std::operator<<<std::char_traits<char>>(std::ostream &,char const*)
+.text:0000000140001964                 mov     rdx, cs:_refptr__ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+.text:000000014000196B                 mov     rcx, rax
+.text:000000014000196E                 call    _ZNSolsEPFRSoS_E ; std::ostream::operator<<(std::ostream & (*)(std::ostream &))
+.text:0000000140001973                 lea     rax, [rbp+10h+var_A0]
+.text:000000014000197A                 mov     rdx, rax
+.text:000000014000197D                 mov     rcx, cs:_refptr__ZSt4cout
+.text:0000000140001984                 call    _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator<<<char>(std::ostream &,std::string const&)
+.text:0000000140001989                 lea     rdx, _ZN13ConsoleColorsL5RESETE ; ConsoleColors::RESET
+.text:0000000140001990                 mov     rcx, rax
+.text:0000000140001993                 call    _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE ; std::operator<<<char>(std::ostream &,std::string const&)
+.text:0000000140001998                 mov     rdx, cs:_refptr__ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+.text:000000014000199F                 mov     rcx, rax
+.text:00000001400019A2                 call    _ZNSolsEPFRSoS_E ; std::ostream::operator<<(std::ostream & (*)(std::ostream &))
+.text:00000001400019A7                 mov     ecx, 9C4h       ; dwMilliseconds
+.text:00000001400019AC                 mov     rax, cs:__imp_Sleep
+.text:00000001400019B3                 call    rax ; __imp_Sleep
+.text:00000001400019B5                 call    _Z12ConsoleClearv ; ConsoleClear(void)
+.text:00000001400019B5 ;   } // starts at 140001782
+.text:00000001400019BA                 jmp     loc_14000176C
+.text:00000001400019BF ; ---------------------------------------------------------------------------
+.text:00000001400019BF ;   cleanup() // owned by 1400016F4
+.text:00000001400019BF                 mov     rbx, rax
+.text:00000001400019C2                 lea     rax, [rbp+10h+var_33]
+.text:00000001400019C6                 mov     rcx, rax
+.text:00000001400019C9                 call    _ZNSaIcED1Ev    ; std::allocator<char>::~allocator()
+.text:00000001400019CE                 mov     rax, rbx
+.text:00000001400019D1                 mov     rcx, rax        ; gcc_exc
+.text:00000001400019D4                 call    _Unwind_Resume
+.text:00000001400019D9 ; ---------------------------------------------------------------------------
+.text:00000001400019D9 ;   cleanup() // owned by 140001726
+.text:00000001400019D9                 mov     rbx, rax
+.text:00000001400019DC                 lea     rax, [rbp+10h+var_32]
+.text:00000001400019E0                 mov     rcx, rax
+.text:00000001400019E3                 call    _ZNSaIcED1Ev    ; std::allocator<char>::~allocator()
+.text:00000001400019E8                 jmp     short loc_140001A19
+.text:00000001400019EA ; ---------------------------------------------------------------------------
+.text:00000001400019EA ;   cleanup() // owned by 14000175B
+.text:00000001400019EA                 mov     rbx, rax
+.text:00000001400019ED                 lea     rax, [rbp+10h+var_31]
+.text:00000001400019F1                 mov     rcx, rax
+.text:00000001400019F4                 call    _ZNSaIcED1Ev    ; std::allocator<char>::~allocator()
+.text:00000001400019F9                 jmp     short loc_140001A0D
+.text:00000001400019FB ; ---------------------------------------------------------------------------
+.text:00000001400019FB ;   cleanup() // owned by 140001782
+.text:00000001400019FB                 mov     rbx, rax
+.text:00000001400019FE                 lea     rax, [rbp+10h+var_A0]
+.text:0000000140001A05                 mov     rcx, rax
+.text:0000000140001A08                 call    _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev ; std::string::~string()
+.text:0000000140001A0D
+.text:0000000140001A0D loc_140001A0D:                          ; CODE XREF: main+34F↑j
+.text:0000000140001A0D                 lea     rax, [rbp+10h+var_80]
+.text:0000000140001A11                 mov     rcx, rax
+.text:0000000140001A14                 call    _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev ; std::string::~string()
+.text:0000000140001A19
+.text:0000000140001A19 loc_140001A19:                          ; CODE XREF: main+33E↑j
+.text:0000000140001A19                 lea     rax, [rbp+10h+var_60]
+.text:0000000140001A1D                 mov     rcx, rax
+.text:0000000140001A20                 call    _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev ; std::string::~string()
+.text:0000000140001A25                 mov     rax, rbx
+.text:0000000140001A28                 mov     rcx, rax        ; gcc_exc
+.text:0000000140001A2B                 call    _Unwind_Resume
+.text:0000000140001A2B ; ---------------------------------------------------------------------------
+.text:0000000140001A30                 db 90h
+.text:0000000140001A30 ; } // starts at 1400016AA
+.text:0000000140001A30 main            endp
+.text:0000000140001A30
+.text:0000000140001A31
+.text:0000000140001A31 ; =============== S U B R O U T I N E =======================================
+.text:0000000140001A31
+.text:0000000140001A31 ; Attributes: bp-based frame
+.text:0000000140001A31
+.text:0000000140001A31 ; void _tcf_0(void)
+.text:0000000140001A31 __tcf_0         proc near               ; DATA XREF: __static_initialization_and_destruction_0(int,int)+34↓o
+.text:0000000140001A31                                         ; .pdata:00000001400CF09C↓o ...
+.text:0000000140001A31                 push    rbp
+.text:0000000140001A32                 mov     rbp, rsp
+.text:0000000140001A35                 sub     rsp, 20h
+.text:0000000140001A39                 lea     rcx, _ZStL8__ioinit ; this
+.text:0000000140001A40                 call    _ZNSt8ios_base4InitD1Ev ; std::ios_base::Init::~Init()
+.text:0000000140001A45                 nop
+.text:0000000140001A46                 add     rsp, 20h
+.text:0000000140001A4A                 pop     rbp
+.text:0000000140001A4B                 retn
+.text:0000000140001A4B __tcf_0         endp
+.text:0000000140001A4B
+.text:0000000140001A4C
+.text:0000000140001A4C ; =============== S U B R O U T I N E =======================================
+.text:0000000140001A4C
+.text:0000000140001A4C ; Attributes: bp-based frame
+.text:0000000140001A4C
+.text:0000000140001A4C ; void _tcf_1(void)
+.text:0000000140001A4C __tcf_1         proc near               ; DATA XREF: __static_initialization_and_destruction_0(int,int)+72↓o
+.text:0000000140001A4C                                         ; .pdata:00000001400CF0A8↓o ...
+.text:0000000140001A4C                 push    rbp
+.text:0000000140001A4D                 mov     rbp, rsp
+.text:0000000140001A50                 sub     rsp, 20h
+.text:0000000140001A54                 lea     rcx, _ZN13ConsoleColorsL5RESETE ; ConsoleColors::RESET
+.text:0000000140001A5B                 call    _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev ; std::string::~string()
+.text:0000000140001A60                 nop
+.text:0000000140001A61                 add     rsp, 20h
+.text:0000000140001A65                 pop     rbp
+.text:0000000140001A66                 retn
+.text:0000000140001A66 __tcf_1         endp
+.text:0000000140001A66
+.text:0000000140001A67
+.text:0000000140001A67 ; =============== S U B R O U T I N E =======================================
+.text:0000000140001A67
+.text:0000000140001A67 ; Attributes: bp-based frame
+.text:0000000140001A67
+.text:0000000140001A67 ; void _tcf_2(void)
+.text:0000000140001A67 __tcf_2         proc near               ; DATA XREF: __static_initialization_and_destruction_0(int,int)+B0↓o
+.text:0000000140001A67                                         ; .pdata:00000001400CF0B4↓o ...
+.text:0000000140001A67                 push    rbp
+.text:0000000140001A68                 mov     rbp, rsp
+.text:0000000140001A6B                 sub     rsp, 20h
+.text:0000000140001A6F                 lea     rcx, _ZN13ConsoleColorsL8BLACK_FGE ; ConsoleColors::BLACK_FG
+.text:0000000140001A76                 call    _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev ; std::string::~string()
+.text:0000000140001A7B                 nop
+.text:0000000140001A7C                 add     rsp, 20h
+.text:0000000140001A80                 pop     rbp
+.text:0000000140001A81                 retn
+.text:0000000140001A81 __tcf_2         endp
+.text:0000000140001A81
+.text:0000000140001A82
+.text:0000000140001A82 ; =============== S U B R O U T I N E =======================================
+.text:0000000140001A82
+.text:0000000140001A82 ; Attributes: bp-based frame
+.text:0000000140001A82
+.text:0000000140001A82 ; void _tcf_3(void)
+.text:0000000140001A82 __tcf_3         proc near               ; DATA XREF: __static_initialization_and_destruction_0(int,int)+EE↓o
+.text:0000000140001A82                                         ; .pdata:00000001400CF0C0↓o ...
+.text:0000000140001A82                 push    rbp
+.text:0000000140001A83                 mov     rbp, rsp
+.text:0000000140001A86                 sub     rsp, 20h
+.text:0000000140001A8A                 lea     rcx, _ZN13ConsoleColorsL6RED_FGE ; ConsoleColors::RED_FG
+.text:0000000140001A91                 call    _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev ; std::string::~string()
+.text:0000000140001A96                 nop
+.text:0000000140001A97                 add     rsp, 20h
+.text:0000000140001A9B                 pop     rbp
+.text:0000000140001A9C                 retn
+.text:0000000140001A9C __tcf_3         endp
+.text:0000000140001A9C
+.text:0000000140001A9D
+.text:0000000140001A9D ; =============== S U B R O U T I N E =======================================
+.text:0000000140001A9D
+.text:0000000140001A9D ; Attributes: bp-based frame
+.text:0000000140001A9D
+.text:0000000140001A9D ; void _tcf_4(void)
+.text:0000000140001A9D __tcf_4         proc near               ; DATA XREF: __static_initialization_and_destruction_0(int,int)+12C↓o
+.text:0000000140001A9D                                         ; .pdata:00000001400CF0CC↓o ...
+.text:0000000140001A9D                 push    rbp
+.text:0000000140001A9E                 mov     rbp, rsp
+.text:0000000140001AA1                 sub     rsp, 20h
+.text:0000000140001AA5                 lea     rcx, _ZN13ConsoleColorsL8GREEN_FGE ; ConsoleColors::GREEN_FG
+.text:0000000140001AAC                 call    _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev ; std::string::~string()
+.text:0000000140001AB1                 nop
+.text:0000000140001AB2                 add     rsp, 20h
+.text:0000000140001AB6                 pop     rbp
+.text:0000000140001AB7                 retn
+.text:0000000140001AB7 __tcf_4         endp
+.text:0000000140001AB7
+
+
+
+
+Psudo code 
+
+int __fastcall __noreturn main(int argc, const char **argv, const char **envp)
+{
+  __int64 v3; // rax
+  __int64 v4; // rax
+  __int64 v5; // rax
+  std::ostream *v6; // rax
+  char v7; // bl
+  std::ostream *v8; // rax
+  std::ostream *v9; // rax
+  __int64 v10; // rax
+  std::ostream *v11; // rax
+  std::ostream *v12; // rax
+  __int64 v13; // rax
+  std::ostream *v14; // rax
+  std::ostream *v15; // rax
+  std::ostream *v16; // rax
+  __int64 v17; // rax
+  std::ostream *v18; // rax
+  _BYTE v19[32]; // [rsp+20h] [rbp-90h] BYREF
+  _BYTE v20[32]; // [rsp+40h] [rbp-70h] BYREF
+  _BYTE v21[45]; // [rsp+60h] [rbp-50h] BYREF
+  char v22; // [rsp+8Dh] [rbp-23h] BYREF
+  char v23; // [rsp+8Eh] [rbp-22h] BYREF
+  char v24; // [rsp+8Fh] [rbp-21h] BYREF
+  _BYTE v25[48]; // [rsp+90h] [rbp-20h] BYREF
+
+  _main();
+  GetConsoleWindowSize(&console_width, &console_height);
+  std::allocator<char>::allocator(&v22);
+  std::string::basic_string(v21, "#nuclearhippiemoneygang", &v22);
+  std::allocator<char>::~allocator(&v22);
+  std::allocator<char>::allocator(&v23);
+  std::string::basic_string(
+    v20,
+    "\n"
+    "                   __ooooooooo__\n"
+    "              oOOOOOOOOOOOOOOOOOOOOOo\n"
+    "          oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo\n"
+    "       oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo\n"
+    "     oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo\n"
+    "   oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo\n"
+    "  oOOOOOOOOOOO*  *OOOOOOOOOOOOOO*  *OOOOOOOOOOOOo\n"
+    " oOOOOOOOOOOO      OOOOOOOOOOOO      OOOOOOOOOOOOo\n"
+    " oOOOOOOOOOOOOo  oOOOOOOOOOOOOOOo  oOOOOOOOOOOOOOo\n"
+    "oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo\n"
+    "oOOOO     OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO     OOOOo\n"
+    "oOOOOOO OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO OOOOOOo\n"
+    " *OOOOO  OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  OOOOO*\n"
+    " *OOOOOO  *OOOOOOOOOOOOOOOOOOOOOOOOOOOOO*  OOOOOO*\n"
+    "  *OOOOOO  *OOOOOOOOOOOOOOOOOOOOOOOOOOO*  OOOOOO*\n"
+    "   *OOOOOOo  *OOOOOOOOOOOOOOOOOOOOOOO*  oOOOOOO*\n"
+    "     *OOOOOOOo  *OOOOOOOOOOOOOOOOO*  oOOOOOOO*\n"
+    "       *OOOOOOOOo  *OOOOOOOOOOO*  oOOOOOOOO*\n"
+    "          *OOOOOOOOo           oOOOOOOOO*\n"
+    "              *OOOOOOOOOOOOOOOOOOOOO*\n"
+    "                   \"\"ooooooooo\"\"",
+    &v23);
+  std::allocator<char>::~allocator(&v23);
+  std::allocator<char>::allocator(&v24);
+  std::string::basic_string(
+    v19,
+    "\n"
+    "                          oooo$$$$$$$$$$$$oooo\n"
+    "                      oo$$$$$$$$$$$$$$$$$$$$$$$$o\n"
+    "                   oo$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$o         o$   $$ o$\n"
+    "   o $ oo        o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$o       $$ $$ $$o$\n"
+    "oo $ $ \"$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$\n"
+    "\"$$$$$$o$     o$$$$$$$$$      $$$$$$$$$$$      $$$$$$$$$$o    $$$$$$$$\n"
+    "  $$$$$$$    $$$$$$$$$$$      $$$$$$$$$$$      $$$$$$$$$$$$$$$$$$$$$$$\n"
+    "  $$$$$$$$$$$$$$$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$$$$$$  \"\"\"$$$\n"
+    "   \"$$$\"\"\"\"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     \"$$$\n"
+    "    $$$   o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     \"$$$o\n"
+    "   o$$\"   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$       $$$o\n"
+    "   $$$    $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\" \"$$$$$$ooooo$$$$o\n"
+    "  o$$$oooo$$$$$  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   o$$$$$$$$$$$$$$$$$\n"
+    "  $$$$$$$$\"$$$$   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     $$$$\"\"\"\"\"\"\"\"\n"
+    " \"\"\"\"       $$$$    \"$$$$$$$$$$$$$$$$$$$$$$$$$$$$\"      o$$$\n"
+    "            \"$$$o     \"\"\"$$$$$$$$$$$$$$$$$$\"$$\"         $$$\n"
+    "              $$$o          \"$$\"\"$$$$$$\"\"\"\"           o$$$\n"
+    "               $$$$o                 oo             o$$$\"\n"
+    "                \"$$$$o      o$$$$$$o\"$$$$o        o$$$$\n"
+    "                  \"$$$$$oo     \"\"$$$$o$$$$$o   o$$$$\"\"\n"
+    "                     \"\"$$$$$oooo  \"$$$o$$$$$$$$$\"\"\"\n"
+    "                        \"\"$$$$$$$oo $$$$$$$$$$\n"
+    "                                \"\"\"\"$$$$$$$$$$$\n"
+    "                                    $$$$$$$$$$$$\n"
+    "                                     $$$$$$$$$$\"\n"
+    "                                      \"$$$\"\"\"\"",
+    &v24);
+  std::allocator<char>::~allocator(&v24);
+  while ( 1 )
+  {
+    set_spaces((unsigned int)console_width, &spaces[abi:cxx11], v21);
+    v3 = std::operator<<<char>(refptr__ZSt4cout, &spaces[abi:cxx11]);
+    v4 = std::operator<<<char>(v3, &ConsoleColors::BRIGHT_BLUE_FG);
+    v5 = std::operator<<<char>(v4, v21);
+    v6 = (std::ostream *)std::operator<<<char>(v5, &ConsoleColors::RESET);
+    refptr__ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(v6);
+    std::operator<<<std::char_traits<char>>(refptr__ZSt4cout, "Enter name: ");
+    std::operator>><char>(refptr__ZSt3cin);
+    generate_password(&user_name[abi:cxx11], &system_password);
+    std::operator<<<std::char_traits<char>>(refptr__ZSt4cout, "Enter password: ");
+    std::operator>><char>(refptr__ZSt3cin);
+    std::to_string((std::__cxx11 *)v25, system_password);
+    v7 = std::operator==<char>(&user_password[abi:cxx11], v25);
+    std::string::~string(v25);
+    if ( v7 )
+      break;
+    ConsoleClear();
+    v15 = (std::ostream *)std::operator<<<char>(refptr__ZSt4cout, &ConsoleColors::BRIGHT_RED_FG);
+    v16 = (std::ostream *)std::operator<<<std::char_traits<char>>(v15, "!!!LOSER DETECTED!!!\n GET LUCK NEXT TIME");
+    refptr__ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(v16);
+    v17 = std::operator<<<char>(refptr__ZSt4cout, v19);
+    v18 = (std::ostream *)std::operator<<<char>(v17, &ConsoleColors::RESET);
+    refptr__ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(v18);
+    Sleep(0x9C4u);
+    ConsoleClear();
+  }
+  ConsoleClear();
+  v8 = (std::ostream *)std::operator<<<char>(refptr__ZSt4cout, &ConsoleColors::BRIGHT_GREEN_FG);
+  v9 = (std::ostream *)std::operator<<<std::char_traits<char>>(v8, "!!!Welcome!!!");
+  refptr__ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(v9);
+  v10 = std::operator<<<char>(refptr__ZSt4cout, v20);
+  v11 = (std::ostream *)std::operator<<<char>(v10, &ConsoleColors::RESET);
+  refptr__ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(v11);
+  Sleep(0x9C4u);
+  v12 = (std::ostream *)std::operator<<<char>(refptr__ZSt4cout, &ConsoleColors::BRIGHT_RED_FG);
+  v13 = std::operator<<<std::char_traits<char>>(v12, "...BUT NOT I WILL DIE...");
+  v14 = (std::ostream *)std::operator<<<char>(v13, &ConsoleColors::RESET);
+  refptr__ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(v14);
+  Sleep(0x5DCu);
+  exit(0);
+}
