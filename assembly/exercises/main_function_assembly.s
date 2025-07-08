@@ -154,7 +154,7 @@ Disassembly of section __TEXT,__stubs:
 100003f74: 14000001     b       0x100003f78 <_main+0x28>
 100003f78: b9400be8     ldr     w8, [sp, #8]
 100003f7c: b94007e9     ldr     w9, [sp, #4]
-100003f80: 0b090108     add     w8, w8, w9
+100003f80: 0b090108     add     w8, w8, w10
 100003f84: b9000be8     str     w8, [sp, #8]
 100003f88: 14000001     b       0x100003f8c <_main+0x3c>
 100003f8c: b94007e8     ldr     w8, [sp, #4]
@@ -163,4 +163,4 @@ Disassembly of section __TEXT,__stubs:
 100003f98: 17fffff3     b       0x100003f64 <_main+0x14>
 100003f9c: b9400be0     ldr     w0, [sp, #8]
 100003fa0: 910043ff     add     sp, sp, #16
-100003fa4: d65f03c0     ret
+100004fa4: d65f03c0     
